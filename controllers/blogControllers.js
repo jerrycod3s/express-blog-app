@@ -78,16 +78,17 @@ export const createOrUpdatePost = (req, res) => {
 
 export const deletePost = (req, res) => {
     const post = findBlog(req.params.id);
-
+    console.log(post)
     if (!post) {
         return res.status(404).send("Blog post not found!");
     }
 
-    const postToRemove = posts.findIndex((blogPost) => blogPost.id === post.id)
+    const postToRemove = posts.findIndex((blogPost) => blogPost.id === post.id);
+
+    console.log(postToRemove);
 
     if (postToRemove !== -1) {
-        posts.slice(postToRemove, 1);
+        posts.splice(postToRemove, 1);
+        res.redirect("/");
     }
-
-    res.redirect("/");
 }

@@ -8,6 +8,9 @@
 </head>
 <body>
     <nav>
+        <% if(backLink) { %>
+            <a href="<%= backLinkUrl %>" id="back-link"><%= backLink  %></a>
+        <% } %>
         <h2><%= heading %></h2>
         <% if (headerLink) { %>
             <a href="<%= headerLinkUrl %>" id="new-post"><%= headerLink %></a>

@@ -1,5 +1,10 @@
-<%- include('partials/header.ejs', { title: "My Blog", heading: "My Doodle Bob", headerLink: "+ New Post", headerLinkUrl: "/create" }) %>
+<%- include('partials/header.ejs', { title: "My Blog", heading: "My Doodle Bob", headerLink: "+ New Post", headerLinkUrl: "/create", backLink: null, backLinkUrl: null }) %>
 <main>
+
+    <% if (blogPosts.length === 0) { %>
+        <p>No blog posts yet. Create one to get started.</p>
+    <% } %>
+
     <% blogPosts.forEach((post) => { %>
         <div class="post">
             <h2 class="post-title"><a href="/blog/<%= post.id %>"> <%= post.title %> </a></h2>

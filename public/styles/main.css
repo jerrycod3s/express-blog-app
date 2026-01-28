@@ -47,7 +47,7 @@ main {
 .modify-post-btns {
     display: flex;
     align-items: center;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 .modify-post-btns a {
     border: none;
@@ -59,6 +59,9 @@ main {
 }
 #edit-btn {
     color: blue;
+    vertical-align: middle;
+    font-size: 0.80em;
+    margin-top: 0.25em;
 }
 #delete-btn {
     color: red;
@@ -80,12 +83,14 @@ main {
     color: white;
     border: none;
 }
+
 #cancel-btn {
-    border: none;
-}
-#cancel-btn a {
     text-decoration: none;
     color: black;
+    background-color: rgb(191, 189, 189);
+    padding: 0.80em 1.25em;
+    border-radius: 5px;
+    font-size: 0.85em;
 }
 
 #create-post button {
@@ -105,6 +110,7 @@ hr {
 }
 #delete-btn-full {
     background-color: red;
+    cursor: pointer;
 }
 #delete-btn-full, #edit-btn-full {
     color: white;
@@ -114,9 +120,9 @@ hr {
     font-size: 0.8rem;
 }
 #back-link {
-    margin-right: 90%;
     text-decoration: none;
-    color: rgba(16, 16, 238, 0.945);
+    color: blue;
+    font-size: 0.9em;
 }
 #delete-form-btn button {
     background-color: white;

@@ -1,7 +1,9 @@
 <%- include('partials/header.ejs', { 
     title: post ? "Edit Post" : "Create Post", 
     heading: post ? "Edit Post" : "Create Post", 
-    headerLink: null, headerLinkUrl: null}) 
+    headerLink: null, headerLinkUrl: null,
+    backLink: null, backLinkUrl: null
+    }) 
 %>
 <main>
     <form action="/create-post/<%= post ? post.id : "new" %>" method="post" id="create-post" class="post">

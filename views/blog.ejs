@@ -1,4 +1,4 @@
-<%- include("partials/header.ejs", { title: "Blog Post", heading: null, headerLink: "← Back to posts", headerLinkUrl: "/"}) %>
+<%- include("partials/header.ejs", { title: "Blog Post", heading: null, headerLink: null, headerLinkUrl: null, backLink: "← Back to posts", backLinkUrl: "/"}) %>
 <main>
     <div class="post">
         <h1 class="post-title"><%= post.title  %></h1>
@@ -7,7 +7,7 @@
         <hr>
         <div class="modify-post-btns">
                 <a href="/edit/blog/<%= post.id %>" id="edit-btn-full">Edit</a>
-                <form action="/delete/<% post.id %>" method="post">
+                <form action="/delete/<%= post.id %>" method="post">
                     <button type="submit" id="delete-btn-full">Delete</button>
                 </form>
         </div>

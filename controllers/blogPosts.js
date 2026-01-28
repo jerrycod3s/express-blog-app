@@ -1,6 +1,6 @@
 export const posts = [
     {
-        id: Date.now(),
+        id: 1,
         title: "My First Blog Post",
         author: "Spongebob",
         date: "January 12, 2026",
@@ -9,7 +9,7 @@ export const posts = [
                     Later on, this content could support images, code blocks, or rich text.This is a short excerpt of the post content about the story of young man.`
     },
     {
-        id: Date.now(),
+        id: 2,
         title: "Another Post",
         author: "Spongebob",
         date: "January 20, 2026",
