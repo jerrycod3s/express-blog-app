@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs', { title: "My Blog", heading: "My Doodle Bob", headerLink: "+ New Post", headerLinkUrl: "/create" }) %>
+<main>
+    <% blogPosts.forEach((post) => { %>
+        <div class="post">
+            <h2 class="post-title"><a href="/blog/<%= post.id %>"> <%= post.title %> </a></h2>
+            <p class="post-caption"><%= post.author %> · <%= post.date %></p>
+            <p class="post-description"><%= post.content.slice(0,43) %>...</p>
+
+            <div class="modify-post-btns">
+                <a href="/edit/blog/<%= post.id %>" id="edit-btn">Edit</a>
+
+                <form action="/delete/<%= post.id %>" method="post" id="delete-form-btn">
+                    <button type="submit" id="delete-btn">Delete</button>
+                </form>
+                
+            </div>
+        </div>
+    <% }) %>
+</main>
+<%- include('partials/footer.ejs') %>

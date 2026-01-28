@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs', { 
+    title: post ? "Edit Post" : "Create Post", 
+    heading: post ? "Edit Post" : "Create Post", 
+    headerLink: null, headerLinkUrl: null}) 
+%>
+<main>
+    <form action="/create-post/<%= post ? post.id : "new" %>" method="post" id="create-post" class="post">
+        <input type="text" id="post-title" placeholder="Post Title" name="title" value="<%= post ? post.title : "" %>" required>
+        <textarea name="content" id="post-content" placeholder="Write your blog post content here..." rows="15" required><%= post ? post.content : "" %></textarea>
+        <div class="form-btns">
+            <button type="submit" id="save-btn">Save Post</button>
+            <a href="/" id="cancel-btn">Cancel</a>
+        </div>
+    </form>
+</main>

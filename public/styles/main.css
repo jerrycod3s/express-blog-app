@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(246, 244, 244);
+}
+nav {
+    background-color: white;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 10px 32px;
+    border-bottom: 1px solid rgb(202, 200, 200);
+}
+#new-post {
+    background-color: rgb(64, 64, 245);
+    color: white;
+    border: none;   
+    text-decoration: none;
+    padding: 0.75em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+main {
+    max-width: 800px;
+    padding: 0 16px;
+    margin: 32px auto;
+}
+.post {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid rgb(227, 225, 225);
+}
+.post-caption {
+    font-size: 0.75rem;
+    color: gray;
+}
+.post-title {
+    margin-top: 0;
+}
+.post-title a {
+    color: black;
+    text-decoration: none;
+}
+.modify-post-btns {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.modify-post-btns a {
+    border: none;
+    text-decoration: none;
+    font-size: 0.75rem;
+    margin-right: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+#edit-btn {
+    color: blue;
+}
+#delete-btn {
+    color: red;
+}
+#create-post {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 1px solid rgb(202, 200, 200);
+}
+#create-post input, #create-post textarea {
+    padding: 1em;
+    border: 1px solid;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 5px;
+}
+#save-btn {
+    background-color: rgb(64, 64, 245);
+    color: white;
+    border: none;
+}
+#cancel-btn {
+    border: none;
+}
+#cancel-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+#create-post button {
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.full-content {
+    line-height: 3;
+}
+hr {
+    border: 1px solid rgb(235, 233, 233);
+    margin-bottom: 1.5rem;
+}
+#edit-btn-full {
+    background-color: blue;
+}
+#delete-btn-full {
+    background-color: red;
+}
+#delete-btn-full, #edit-btn-full {
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    border: none;
+    font-size: 0.8rem;
+}
+#back-link {
+    margin-right: 90%;
+    text-decoration: none;
+    color: rgba(16, 16, 238, 0.945);
+}
+#delete-form-btn button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
